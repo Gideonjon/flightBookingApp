@@ -10,4 +10,9 @@
         android:name="com.dash.cheapflights.FragmentHome"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.dash.cheapflights.FragmentSearch"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
 </navigation>
