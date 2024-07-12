@@ -1,8 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@color/background_color"
+    android:layout_height="wrap_content">
 
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/locationImage"
+        android:layout_width="100dp"
+        android:layout_height="97dp"
+        android:src="@drawable/image"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="7dp" />
+
+    <TextView
+        android:id="@+id/locationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Die Antwoord"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/sfmedium"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/locationImage"
+        app:layout_constraintStart_toStartOf="@+id/locationImage"
+        app:layout_constraintTop_toBottomOf="@id/locationImage" />
+
+    <ImageView
+        android:id="@+id/flightIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:rotation="33"
+        app:layout_constraintStart_toStartOf="@+id/locationCountry"
+        app:layout_constraintTop_toBottomOf="@+id/locationCountry"
+        app:srcCompat="@drawable/baseline_flight_24"
+        app:tint="#9F9F9F" />
+
+    <TextView
+        android:id="@+id/locationCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/sfmedium"
+        android:text="Будапешт"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/locationName"
+        app:layout_constraintTop_toBottomOf="@+id/locationName" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="от 22 264 ₽"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flightIcon"
+        app:layout_constraintTop_toTopOf="@+id/flightIcon"
+        android:layout_marginLeft="7dp" />
 
 
 
