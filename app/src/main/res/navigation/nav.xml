@@ -9,10 +9,19 @@
         android:id="@+id/fragmentHome"
         android:name="com.dash.cheapflights.FragmentHome"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentSearch"
+            app:destination="@id/fragmentSearch" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentSearch"
         android:name="com.dash.cheapflights.FragmentSearch"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/fragmentFilter"
+        android:name="com.dash.cheapflights.FragmentFilter"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
 </navigation>
