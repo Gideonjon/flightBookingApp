@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/baseline_flight_24"
+        android:title="Авиабилеты" />
+    <item
+        android:icon="@drawable/baseline_local_taxi_24"
+        android:title="Отели" />
+    <item
+        android:icon="@drawable/baseline_location_on_24"
+        android:title="Короче"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:icon="@drawable/baseline_notifications_24"
+        android:title="Подписки" />
+    <item
+        android:icon="@drawable/baseline_person_24"
+        android:title="Профиль" />
+
+
+</menu>
