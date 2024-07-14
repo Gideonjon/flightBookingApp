@@ -23,130 +23,69 @@
 
 
             <ImageView
+                android:id="@+id/complex_route"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:padding="7dp"
-                android:src="@drawable/baseline_close_24"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#2261BC" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:padding="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#2261BC" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="12dp"
                 android:fontFamily="@font/sfmedium"
-                android:text="Фильтры"
+                android:text="Москва-Сочи"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/complex_route"
                 app:layout_constraintStart_toEndOf="@+id/complex_route"
-                app:layout_constraintTop_toTopOf="@+id/complex_route" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:fontFamily="@font/sfmedium"
-        android:text="Пересадки"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="22dp"
-        android:layout_marginTop="22dp"
-        app:cardBackgroundColor="#242529"
-        app:layout_constraintTop_toBottomOf="@id/textView6">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="50dp"
-                android:layout_height="197dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch1"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="12dp"
+                android:text="23 февраля,"
+                android:textColor="#9F9F9F"
+                android:textSize="14sp"
                 android:fontFamily="@font/sfmedium"
-                android:text="Без пересадок"
-                android:textColor="@color/white"
-                android:thumb="@drawable/thumb"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-                app:track="@drawable/track" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:text="1 пассажир"
+                android:textColor="#9F9F9F"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="22dp"
-        app:cardBackgroundColor="#242529"
-        app:layout_constraintTop_toBottomOf="@id/cardView">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="3dp"
-                android:fontFamily="@font/sfmedium"
-                android:text="Только с багажом"
-                android:textColor="@color/white"
-                android:thumb="@drawable/thumb"
-                app:layout_constraintTop_toTopOf="parent"
-
-                app:track="@drawable/track" />
-
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="7dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginBottom="17dp"
-        android:background="@drawable/button_bg"
-        android:fontFamily="@font/sfmedium"
-        android:text="Готово"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
