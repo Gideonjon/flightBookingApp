@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="12dp"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="12dp"
     tools:context=".FragmentSearch">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@drawable/card_bg"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/card_bg">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/vector"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="12dp"
+            android:src="@drawable/vector"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.cardview.widget.CardView
@@ -40,13 +39,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="140dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
 
                 <androidx.cardview.widget.CardView
@@ -75,7 +67,7 @@
                             android:id="@+id/search"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
+                            android:layout_marginStart="7dp"
                             android:layout_marginLeft="7dp"
                             android:src="@android:drawable/ic_menu_search"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -85,23 +77,23 @@
 
                         <EditText
                             android:id="@+id/locationName"
-                            android:layout_width="220dp"
+                            android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:layout_marginLeft="12dp"
                             android:layout_marginBottom="8dp"
                             android:backgroundTint="#5E5F61"
                             android:drawableStart="@drawable/baseline_flight_24"
-                            android:fontFamily="@font/sfmedium"
+                            android:drawableLeft="@drawable/baseline_flight_24"
                             android:drawableTint="#5E5F61"
+                            android:fontFamily="@font/sfmedium"
                             android:inputType="text"
                             android:text="Минск"
                             android:textColor="@color/white"
                             android:textSize="12sp"
                             app:layout_constraintBottom_toBottomOf="@+id/search"
                             app:layout_constraintStart_toEndOf="@+id/search"
-                            app:layout_constraintTop_toTopOf="@+id/search"
-                            android:drawableLeft="@drawable/baseline_flight_24" />
+                            app:layout_constraintTop_toTopOf="@+id/search" />
 
                         <TextView
                             android:id="@+id/locationVenue"
@@ -120,15 +112,167 @@
                 </androidx.cardview.widget.CardView>
 
 
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="140dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
 
+        <ImageView
+            android:id="@+id/complex_route"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/complexroute"
+            android:padding="7dp"
+            android:src="@drawable/baseline_keyboard_command_key_24"
+            app:layout_constraintEnd_toStartOf="@id/anywhere"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+        <ImageView
+            android:id="@+id/anywhere"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/anywhere"
+            android:padding="7dp"
+            android:src="@drawable/baseline_language_24"
+            app:layout_constraintEnd_toStartOf="@id/weekend"
+            app:layout_constraintStart_toEndOf="@+id/complex_route"
+            app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+        <ImageView
+            android:id="@+id/weekend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/weekend"
+            android:padding="7dp"
+            android:src="@drawable/baseline_calendar_month_24"
+            app:layout_constraintEnd_toStartOf="@id/tickets"
+            app:layout_constraintStart_toEndOf="@id/anywhere"
+            app:layout_constraintTop_toBottomOf="@id/cardView" />
 
 
+        <ImageView
+            android:id="@+id/tickets"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/tickets"
+            android:padding="7dp"
+            android:src="@drawable/baseline_local_fire_department_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/weekend"
+            app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+        <TextView
+            android:id="@+id/complexRouteTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/sfmedium"
+            android:gravity="center_horizontal"
+            android:text="Сложный\nмаршрут"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/complex_route"
+            app:layout_constraintStart_toStartOf="@id/complex_route"
+            app:layout_constraintTop_toBottomOf="@+id/complex_route" />
+
+        <TextView
+            android:id="@+id/anywhereTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfmedium"
+            android:gravity="center_horizontal"
+            android:text="Куда угодно"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/anywhere"
+            app:layout_constraintStart_toStartOf="@id/anywhere"
+            app:layout_constraintTop_toTopOf="@id/complexRouteTxt" />
+
+        <TextView
+            android:id="@+id/weekendTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfmedium"
+            android:gravity="center_horizontal"
+            android:text="Выходные"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/weekend"
+            app:layout_constraintStart_toStartOf="@id/weekend"
+            app:layout_constraintTop_toTopOf="@id/complexRouteTxt" />
+
+        <TextView
+            android:id="@+id/ticketTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfmedium"
+            android:gravity="center_horizontal"
+            android:text="Горячие\nбилеты"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/tickets"
+            app:layout_constraintStart_toStartOf="@id/tickets"
+            app:layout_constraintTop_toTopOf="@id/complexRouteTxt" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            app:cardBackgroundColor="#2F3035"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintTop_toBottomOf="@id/complexRouteTxt"
+            tools:layout_editor_absoluteX="32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="140dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="271dp"
+                    android:layout_height="138dp"
+                    tools:layout_editor_absoluteX="1dp"
+                    tools:layout_editor_absoluteY="1dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="12dp"
+            android:padding="7dp"
+            app:layout_constraintEnd_toStartOf="@id/weekend"
+            app:layout_constraintStart_toEndOf="@+id/complex_route"
+            app:layout_constraintTop_toBottomOf="@id/cardDestination" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.cardview.widget.CardView>
