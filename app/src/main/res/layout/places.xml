@@ -5,63 +5,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_marginTop="17dp"
+    app:cardBackgroundColor="#1D1E20"
+    app:cardCornerRadius="8dp"
     android:layout_marginHorizontal="12dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
+            android:layout_marginBottom="12dp"
             android:layout_height="match_parent">
 
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="25dp" />
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="17dp"
+                android:fontFamily="@font/sfbold"
+                android:textSize="22sp"
+                android:text="7386 ₽"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="12dp" />
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="22dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price"
                 app:srcCompat="@drawable/baseline_circle_24"
-                tools:layout_editor_absoluteX="46dp"
-                tools:layout_editor_absoluteY="119dp" />
+                app:tint="#FF5E5E" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:layout_editor_absoluteX="139dp"
-                tools:layout_editor_absoluteY="213dp" />
+                android:fontFamily="@font/sfregular"
+                android:text="03:14"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                android:layout_marginLeft="4dp" />
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:layout_editor_absoluteX="157dp"
-                tools:layout_editor_absoluteY="275dp" />
+                android:text="3.5ч в пути / Без пересадок"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:layout_editor_absoluteX="61dp"
-                tools:layout_editor_absoluteY="377dp" />
+                android:text="DME"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textView10"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="393dp" />
+                android:text="AER"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/textView14"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                app:srcCompat="@drawable/vector"
+                android:layout_marginLeft="4dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfregular"
+                android:text="12:00"
+                android:textColor="@color/white"
+                android:layout_marginStart="4dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                android:layout_marginLeft="12dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
