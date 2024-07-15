@@ -24,4 +24,14 @@
         android:name="com.dash.cheapflights.FragmentFilter"
         android:label="fragment_filter"
         tools:layout="@layout/fragment_filter" />
+    <fragment
+        android:id="@+id/flightCard"
+        android:name="com.dash.cheapflights.FlightCard"
+        android:label="fragment_flight_card"
+        tools:layout="@layout/fragment_flight_card" />
+    <fragment
+        android:id="@+id/searchCountry"
+        android:name="com.dash.cheapflights.SearchCountry"
+        android:label="fragment_search_country"
+        tools:layout="@layout/fragment_search_country" />
 </navigation>
