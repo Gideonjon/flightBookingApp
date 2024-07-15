@@ -194,6 +194,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:backgroundTint="#2261BC"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sfmedium"
         android:text="Посмотреть все билеты"
         android:layout_marginHorizontal="22dp"
         app:layout_constraintTop_toBottomOf="@+id/cardDestination"/>
@@ -220,17 +223,21 @@
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/sfmedium"
+                android:drawableStart="@drawable/baseline_notifications_24"
+                android:drawableTint="#2261BC"
                 android:text="Только с багажом"
                 android:textColor="@color/white"
                 android:thumb="@drawable/thumb"
+                android:drawablePadding="3dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:track="@drawable/track" />
 
 
             <ImageView
                 android:layout_width="50dp"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:padding="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
