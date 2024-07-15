@@ -95,8 +95,8 @@
         android:id="@+id/chips"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="12dp"
         android:orientation="horizontal"
         android:padding="12dp"
         app:chipSpacingHorizontal="7dp"
@@ -150,28 +150,47 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:layout_marginTop="32dp"
-        app:cardBackgroundColor="#2F3035"
+        app:cardBackgroundColor="#1D1E20"
         app:cardCornerRadius="16dp"
         app:cardElevation="2dp"
-        app:layout_constraintTop_toBottomOf="@id/chips"
-        tools:layout_editor_absoluteX="32dp">
+        app:layout_constraintTop_toBottomOf="@id/chips">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="12dp">
 
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ticketRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                tools:itemCount="3"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:listitem="@layout/destination" />
+                tools:itemCount="3"
+                tools:listitem="@layout/ticket" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/sfmedium"
+                android:text="Показать все"
+                android:textColor="#2261BC"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ticketRecyclerView" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardDestination"
 
 
 
